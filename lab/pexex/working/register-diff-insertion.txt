@@ -1,0 +1,281 @@
+> rax            0xf1d440	15848512
+> rbx            0x7fffffffd838	140737488345144
+> rcx            0x400000000a000000	4611686018595160064
+> rdx            0x7fffffffd820	140737488345120
+> rsi            0x7fffffffd820	140737488345120
+> rdi            0x3	3
+> rbp            0x7fffffffd8f0	0x7fffffffd8f0
+> rsp            0x7fffffffd818	0x7fffffffd818
+> r8             0x2	2
+> r9             0x7fffffffd9d0	140737488345552
+> r10            0x0	0
+> r11            0x7ffff2068b70	140737253903216
+> r12            0xafa950	11512144
+> r13            0x180	384
+> r14            0x7fffffffd820	140737488345120
+> r15            0xbab772	12236658
+> rip            0x5438c3	0x5438c3 <Ftimes+3>
+> eflags         0x202	[ IF ]
+> cs             0x33	51
+> ss             0x2b	43
+> ds             0x0	0
+> es             0x0	0
+> fs             0x0	0
+> gs             0x0	0
+> rsi            0x3	3
+> rip            0x5438c6	0x5438c6 <Ftimes+6>
+> rdi            0x2	2
+> rip            0x5438cb	0x5438cb <Ftimes+11>
+> rip            0x543500	0x543500 <arith_driver>
+> rsp            0x7fffffffd810	0x7fffffffd810
+> rip            0x543502	0x543502 <arith_driver+2>
+> rsp            0x7fffffffd808	0x7fffffffd808
+> rip            0x543504	0x543504 <arith_driver+4>
+> rsp            0x7fffffffd800	0x7fffffffd800
+> rip            0x543506	0x543506 <arith_driver+6>
+> rsp            0x7fffffffd7f8	0x7fffffffd7f8
+> rip            0x543508	0x543508 <arith_driver+8>
+> rsp            0x7fffffffd7f0	0x7fffffffd7f0
+> rip            0x543509	0x543509 <arith_driver+9>
+> rsp            0x7fffffffd7e8	0x7fffffffd7e8
+> rip            0x54350a	0x54350a <arith_driver+10>
+> rbp            0x1	0x1
+> rip            0x54350f	0x54350f <arith_driver+15>
+> rsp            0x7fffffffd7d0	0x7fffffffd7d0
+> rip            0x543513	0x543513 <arith_driver+19>
+> rip            0x543516	0x543516 <arith_driver+22>
+> eflags         0x246	[ PF ZF IF ]
+> rip            0x543525	0x543525 <arith_driver+37>
+> rip            0x543528	0x543528 <arith_driver+40>
+> eflags         0x206	[ PF IF ]
+> rip            0x54352e	0x54352e <arith_driver+46>
+> r15            0x7fffffffd820	140737488345120
+> rip            0x543531	0x543531 <arith_driver+49>
+> r13            0x3	3
+> rip            0x543534	0x543534 <arith_driver+52>
+> r14            0x2	2
+> rip            0x543537	0x543537 <arith_driver+55>
+> r11            0x1	1
+> rip            0x54353a	0x54353a <arith_driver+58>
+> rcx            0x0	0
+> rip            0x54353c	0x54353c <arith_driver+60>
+> eflags         0x246	[ PF ZF IF ]
+> rbx            0x0	0
+> rip            0x54353e	0x54353e <arith_driver+62>
+> r12            0x0	0
+> rip            0x543541	0x543541 <arith_driver+65>
+> rdi            0x6d54	27988
+> rip            0x543545	0x543545 <arith_driver+69>
+> rax            0x6d54	27988
+> rip            0x543547	0x543547 <arith_driver+71>
+> rsi            0x6d54	27988
+> rip            0x543549	0x543549 <arith_driver+73>
+> rax            0x4	4
+> rip            0x54354c	0x54354c <arith_driver+76>
+> eflags         0x202	[ IF ]
+> rip            0x54354f	0x54354f <arith_driver+79>
+> rip            0x543551	0x543551 <arith_driver+81>
+> rip            0x543558	0x543558 <arith_driver+88>
+> rip            0x54355c	0x54355c <arith_driver+92>
+> eflags         0x246	[ PF ZF IF ]
+> rdx            0xbb8902	12290306
+> rip            0x543563	0x543563 <arith_driver+99>
+> rip            0x54356e	0x54356e <arith_driver+110>
+> rip            0x543571	0x543571 <arith_driver+113>
+> eflags         0x293	[ CF AF SF IF ]
+> rip            0x543577	0x543577 <arith_driver+119>
+> rip            0x54357b	0x54357b <arith_driver+123>
+> rdi            0x1b55	6997
+> rip            0x54357f	0x54357f <arith_driver+127>
+> eflags         0x206	[ PF IF ]
+> rip            0x543583	0x543583 <arith_driver+131>
+> eflags         0x297	[ CF PF AF SF IF ]
+> rip            0x543585	0x543585 <arith_driver+133>
+> rax            0x2	2
+> rip            0x543588	0x543588 <arith_driver+136>
+> rip            0x543600	0x543600 <arith_driver+256>
+> rip            0x543603	0x543603 <arith_driver+259>
+> eflags         0x206	[ PF IF ]
+> rip            0x543609	0x543609 <arith_driver+265>
+> rip            0x54360f	0x54360f <arith_driver+271>
+> rip            0x543612	0x543612 <arith_driver+274>
+> eflags         0x202	[ IF ]
+> rip            0x543618	0x543618 <arith_driver+280>
+> rax            0x7fffffffffffffff	9223372036854775807
+> rip            0x543622	0x543622 <arith_driver+290>
+> rdx            0x0	0
+> rip            0x543624	0x543624 <arith_driver+292>
+> rax            0x4aee2e9caa7ef	1318189515057135
+> rdx            0x8a4	2212
+> rip            0x543627	0x543627 <arith_driver+295>
+> rip            0x54362a	0x54362a <arith_driver+298>
+> eflags         0x206	[ PF IF ]
+> rax            0x4aee2e9caa700	1318189515056896
+> rip            0x54362d	0x54362d <arith_driver+301>
+> rip            0x54362f	0x54362f <arith_driver+303>
+> eflags         0x246	[ PF ZF IF ]
+> rip            0x5437c8	0x5437c8 <arith_driver+712>
+> rbp            0x1b55	0x1b55
+> rip            0x5437cc	0x5437cc <arith_driver+716>
+> eflags         0x206	[ PF IF ]
+> rip            0x5435a8	0x5435a8 <arith_driver+168>
+> rbx            0x1	1
+> rip            0x5435ac	0x5435ac <arith_driver+172>
+> eflags         0x202	[ IF ]
+> rip            0x5435af	0x5435af <arith_driver+175>
+> rip            0x5435b5	0x5435b5 <arith_driver+181>
+> rdi            0xfffff00001000004	-17592169267196
+> rip            0x5435b9	0x5435b9 <arith_driver+185>
+> rip            0x5435bb	0x5435bb <arith_driver+187>
+> eflags         0x246	[ PF ZF IF ]
+> r11            0x1b55	6997
+> rip            0x5435bf	0x5435bf <arith_driver+191>
+> r12            0x1	1
+> rip            0x5435c3	0x5435c3 <arith_driver+195>
+> rax            0x1000004	16777220
+> rip            0x5435c5	0x5435c5 <arith_driver+197>
+> rsi            0x1000004	16777220
+> rip            0x5435c7	0x5435c7 <arith_driver+199>
+> rax            0x4	4
+> rip            0x5435ca	0x5435ca <arith_driver+202>
+> eflags         0x202	[ IF ]
+> rip            0x5435cd	0x5435cd <arith_driver+205>
+> rip            0x543558	0x543558 <arith_driver+88>
+> rip            0x54355c	0x54355c <arith_driver+92>
+> eflags         0x246	[ PF ZF IF ]
+> rdx            0xbb8902	12290306
+> rip            0x543563	0x543563 <arith_driver+99>
+> rip            0x54356e	0x54356e <arith_driver+110>
+> rip            0x543571	0x543571 <arith_driver+113>
+> eflags         0x293	[ CF AF SF IF ]
+> rip            0x543577	0x543577 <arith_driver+119>
+> rip            0x54357b	0x54357b <arith_driver+123>
+> rdi            0xfffffc0000400001	-4398042316799
+> rip            0x54357f	0x54357f <arith_driver+127>
+> eflags         0x282	[ SF IF ]
+> rip            0x543583	0x543583 <arith_driver+131>
+> eflags         0x297	[ CF PF AF SF IF ]
+> rip            0x543585	0x543585 <arith_driver+133>
+> rax            0x2	2
+> rip            0x543588	0x543588 <arith_driver+136>
+> rip            0x543600	0x543600 <arith_driver+256>
+> rip            0x543603	0x543603 <arith_driver+259>
+> eflags         0x282	[ SF IF ]
+> rip            0x5437d8	0x5437d8 <arith_driver+728>
+> rip            0x5437db	0x5437db <arith_driver+731>
+> eflags         0x206	[ PF IF ]
+> rip            0x5437dd	0x5437dd <arith_driver+733>
+> rip            0x5437e1	0x5437e1 <arith_driver+737>
+> eflags         0x293	[ CF AF SF IF ]
+> rip            0x5437e3	0x5437e3 <arith_driver+739>
+> rax            0x8000000000000000	-9223372036854775808
+> rip            0x5437ed	0x5437ed <arith_driver+749>
+> rdx            0xffffffffffffffff	-1
+> rip            0x5437ef	0x5437ef <arith_driver+751>
+> rax            0x200002	2097154
+> rdx            0xffffffffff5ffffe	-10485762
+> rip            0x5437f2	0x5437f2 <arith_driver+754>
+> rip            0x5437f5	0x5437f5 <arith_driver+757>
+> eflags         0x212	[ AF IF ]
+> rax            0x200000	2097152
+> rip            0x5437f8	0x5437f8 <arith_driver+760>
+> rip            0x54362d	0x54362d <arith_driver+301>
+> rip            0x54362f	0x54362f <arith_driver+303>
+> eflags         0x246	[ PF ZF IF ]
+> rip            0x5437c8	0x5437c8 <arith_driver+712>
+> rbp            0xff92ac06d5401b55	0xff92ac06d5401b55
+> rip            0x5437cc	0x5437cc <arith_driver+716>
+> eflags         0x286	[ PF SF IF ]
+> rip            0x5435a8	0x5435a8 <arith_driver+168>
+> rbx            0x2	2
+> rip            0x5435ac	0x5435ac <arith_driver+172>
+> eflags         0x202	[ IF ]
+> rip            0x5435af	0x5435af <arith_driver+175>
+> rip            0x5435b5	0x5435b5 <arith_driver+181>
+> rdi            0x2cc	716
+> rip            0x5435b9	0x5435b9 <arith_driver+185>
+> rip            0x5435bb	0x5435bb <arith_driver+187>
+> eflags         0x246	[ PF ZF IF ]
+> r11            0xff92ac06d5401b55	-30773102090642603
+> rip            0x5435bf	0x5435bf <arith_driver+191>
+> r12            0x2	2
+> rip            0x5435c3	0x5435c3 <arith_driver+195>
+> rax            0x2cc	716
+> rip            0x5435c5	0x5435c5 <arith_driver+197>
+> rsi            0x2cc	716
+> rip            0x5435c7	0x5435c7 <arith_driver+199>
+> rax            0x4	4
+> rip            0x5435ca	0x5435ca <arith_driver+202>
+> eflags         0x202	[ IF ]
+> rip            0x5435cd	0x5435cd <arith_driver+205>
+> rip            0x543558	0x543558 <arith_driver+88>
+> rip            0x54355c	0x54355c <arith_driver+92>
+> eflags         0x246	[ PF ZF IF ]
+> rdx            0xbb8902	12290306
+> rip            0x543563	0x543563 <arith_driver+99>
+> rip            0x54356e	0x54356e <arith_driver+110>
+> rip            0x543571	0x543571 <arith_driver+113>
+> eflags         0x293	[ CF AF SF IF ]
+> rip            0x543577	0x543577 <arith_driver+119>
+> rip            0x54357b	0x54357b <arith_driver+123>
+> rdi            0xb3	179
+> rip            0x54357f	0x54357f <arith_driver+127>
+> eflags         0x202	[ IF ]
+> rip            0x543583	0x543583 <arith_driver+131>
+> eflags         0x297	[ CF PF AF SF IF ]
+> rip            0x543585	0x543585 <arith_driver+133>
+> rax            0x2	2
+> rip            0x543588	0x543588 <arith_driver+136>
+> rip            0x543600	0x543600 <arith_driver+256>
+> rip            0x543603	0x543603 <arith_driver+259>
+> eflags         0x202	[ IF ]
+> rip            0x543609	0x543609 <arith_driver+265>
+> rip            0x54360f	0x54360f <arith_driver+271>
+> rip            0x543612	0x543612 <arith_driver+274>
+> eflags         0x286	[ PF SF IF ]
+> rip            0x543838	0x543838 <arith_driver+824>
+> rax            0x8000000000000000	-9223372036854775808
+> rip            0x543842	0x543842 <arith_driver+834>
+> rdx            0xffffffffffffffff	-1
+> rip            0x543844	0x543844 <arith_driver+836>
+> rax            0xff48f044a5e641ca	-51527218082987574
+> rdx            0xffffffffffffffc2	-62
+> rip            0x543847	0x543847 <arith_driver+839>
+> rip            0x54384a	0x54384a <arith_driver+842>
+> eflags         0x283	[ CF SF IF ]
+> rax            0xff48f044a5e64100	-51527218082987776
+> rip            0x54384d	0x54384d <arith_driver+845>
+> rip            0x54362d	0x54362d <arith_driver+301>
+> rip            0x54362f	0x54362f <arith_driver+303>
+> eflags         0x246	[ PF ZF IF ]
+> rip            0x5437c8	0x5437c8 <arith_driver+712>
+> rbp            0xb38e48c71bd31c6f	0xb38e48c71bd31c6f
+> rip            0x5437cc	0x5437cc <arith_driver+716>
+> eflags         0x286	[ PF SF IF ]
+> rip            0x5435a8	0x5435a8 <arith_driver+168>
+> rbx            0x3	3
+> rip            0x5435ac	0x5435ac <arith_driver+172>
+> eflags         0x206	[ PF IF ]
+> rip            0x5435af	0x5435af <arith_driver+175>
+> eflags         0x246	[ PF ZF IF ]
+> rip            0x5436ab	0x5436ab <arith_driver+427>
+> rsp            0x7fffffffd7e8	0x7fffffffd7e8
+> rip            0x5436af	0x5436af <arith_driver+431>
+> eflags         0x206	[ PF IF ]
+> rax            0xce39231c6f4c71bc	-3586797023190552132
+> rip            0x5436b7	0x5436b7 <arith_driver+439>
+> rbx            0x7fffffffd838	140737488345144
+> rsp            0x7fffffffd7f0	0x7fffffffd7f0
+> rip            0x5436b8	0x5436b8 <arith_driver+440>
+> rbp            0x7fffffffd8f0	0x7fffffffd8f0
+> rsp            0x7fffffffd7f8	0x7fffffffd7f8
+> rip            0x5436b9	0x5436b9 <arith_driver+441>
+> rsp            0x7fffffffd800	0x7fffffffd800
+> r12            0xafa950	11512144
+> rip            0x5436bb	0x5436bb <arith_driver+443>
+> rsp            0x7fffffffd808	0x7fffffffd808
+> r13            0x180	384
+> rip            0x5436bd	0x5436bd <arith_driver+445>
+> rsp            0x7fffffffd810	0x7fffffffd810
+> r14            0x7fffffffd820	140737488345120
+> rip            0x5436bf	0x5436bf <arith_driver+447>
