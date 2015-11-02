@@ -1,0 +1,14 @@
+// 2nd Edition
+
+What would be the offsets (in bytes) of the following fields:
+e1.p: 0
+e1.y: 4
+e2.x: 0
+e2.next: 4
+
+B. How many total bytes would the structure require?
+
+8 bytes
+
+C.
+*(up->e2.next->e1.p) – up->e2.x

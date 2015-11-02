@@ -1,0 +1,29 @@
+break Ftimes
+set disassemble-next-line on
+si
+info line
+info registers
+
+
+0x00000000005438c0 <Ftimes+0>data.c:2767	mov    %rsi,%rdx    rdx=0x7fffffffd820
+0x00000000005438c3 <Ftimes+3>data.c:2768	mov    %rdi,%rsi    rsi=0x7fffffffd820
+0x00000000005438c6 <Ftimes+6>data.c:2768	mov    $0x2,%edi    rdi=0x2
+0x00000000005438cb <Ftimes+11>data.c:2768	jmpq   0x543500     rip=0x543500
+0x0000000000543500 <arith_driver+0>data.c:2577  push   %r15     M8[0x7fffffffd810]=0xbab772 rsp=0x7fffffffd810
+0x0000000000543502 <arith_driver+2>data.c:2577	push   %r14     M8[0x7fffffffd808]=0x7fffffffd820 rsp=0x7fffffffd808
+0x0000000000543504 <arith_driver+4>data.c:2577	push   %r13     M8[0x7fffffffd800]=0x180 rsp=0x7fffffffd800
+0x0000000000543506 <arith_driver+6>data.c:2577	push   %r12     M8[0x7fffffffd7f8]=0xafa950 rsp=0x7fffffffd7f8
+0x0000000000543508 <arith_driver+8>data.c:2577	push   %rbp     M8[0x7fffffffd7f0]=0x7fffffffd8f0 rsp=0x7fffffffd7f0
+0x0000000000543509 <arith_driver+9>data.c:2577	push   %rbx     M8[0x7fffffffd7e8]=0x7fffffffd838 rsp=0x7fffffffd7e8
+0x000000000054350a <arith_driver+10>data.c:2577		mov    $0x1,%ebp   rbp=0x1
+0x000000000054350f <arith_driver+15>data.c:2577	sub    $0x18,%rsp   rsp=0x7fffffffd7d0
+0x0000000000543513 <arith_driver+19>data.c:2584	cmp    $0x2,%edi    eflags=0x246
+0x0000000000543516 <arith_driver+22>data.c:2584	je     0x543525     rip=0x543525
+0x0000000000543525 <arith_driver+37>data.c:2602	test   %rsi,%rsi    eflags=0x206
+0x0000000000543528 <arith_driver+40>data.c:2602	jle    0x5436ab
+0x000000000054352e <arith_driver+46>data.c:2602	mov    %rdx,%r15    r15=0x7fffffffd820
+0x0000000000543531 <arith_driver+49>data.c:2602	mov    %rsi,%r13    r13=0x3
+0x0000000000543534 <arith_driver+52>data.c:2602	mov    %edi,%r14d   r14=0x2
+0x0000000000543537 <arith_driver+55>data.c:2602	mov    %rbp,%r11    r11=0x1
+0x000000000054353a <arith_driver+58>data.c:2602	xor    %ecx,%ecx    rcx=0x0 eflags=0x246
+0x000000000054353c <arith_driver+60>data.c:2602	xor    %ebx,%ebx

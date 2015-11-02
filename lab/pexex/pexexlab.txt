@@ -1,0 +1,7 @@
+Logged into seas server, make sure you use lnxsrv09; i.e. ssh to
+lnxsrv09.seas.ucla.edu instead of ugrad.ucla.edu or emacs binary doesn't work.
+Run gdb with the emacs command given in the spec, like so:
+gdb --args ~eggert/bin64/bin/emacs-24.5 -batch -eval '(print (* 6997 -4398042316799 179))'
+Set a breakpoint on the Ftimes function by typing "break Ftimes".
+Run the program with "r". When the program stopes, disassemble it with the
+command "disas Ftimes".

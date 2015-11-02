@@ -1,0 +1,17 @@
+// 2nd Edition
+
+A. We can see in lines 5–7 of the code for word_sum that it appears as if three values are being retrieved from the stack, even though the function has only a single argument. Describe what these three values are.
+
+8(%ebp) is the memory location of the result struct, 12(%ebp) is s1.a, 16(%ebp) is s2.b.
+
+B. We can see in line 4 of the code for prod that 20 bytes are allocated in the stack frame. These get used as five fields of 4 bytes each. Describe how each of these fields gets used.
+
+The first field is the return address. Second field points to s1.a, third to s1.p. The fourth and fifth fields correspond to s2.sum and s2.diff, respectively.
+
+C. How would you describe the general strategy for passing structures as arguments to a function?
+
+Within the calling function's frame, struct member variables are pushed onto the stack in reverse order.
+
+D. How would you describe the general strategy for handling a structure as a return value from a function?
+
+The stack pointer is decremented to make space for the struct, the called function gets a pointer to the beginning of that space, the called function sets the struct member variables in the caller's frame.
