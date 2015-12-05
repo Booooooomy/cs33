@@ -1,0 +1,118 @@
+First, logged into the lnxsrv09 cluster via ssh. Ran `which gcc` to verify that
+the path outputs `/usr/local/cs/bin/gcc`, which it did. Download and extract
+thttpd with wget and tar, respectively.
+
+Next, I modified thttpd.c with the modifications in the patch. The patch makes
+the char string only hold 100 chars, while the fgets function accepts up to
+1000 chars.
+
+Per TA suggestion, I created a shell script to automate the process of
+compiling thttpd with the specified flags.
+
+The script (compile.sh) looked like this:
+
+```
+#!/bin/sh
+
+./configure \
+LDFLAGS="-Xlinker --rpath=/usr/local/cs/gcc-$(gcc -dumpversion)/lib"
+
+make clean
+make CFLAGS='-g3 -O2 -fno-inline -fstack-protector-strong'
+mv src/thttpd src/thttpd-sp
+make clean
+make CFLAGS='-g3 -O2 -fno-inline -static-libasan -fsanitize=address'
+mv src/thttpd src/thttpd-as
+make clean
+make CFLAGS='-g3 -O2 -fno-inline -fno-stack-protector -zexecstack'
+mv src/thttpd src/thttpd-no
+```
+
+Allow execution on the script with `chmod +x compile.sh`, and run it. It
+creates binaries in the src directory at thttpd-sp, thttpd-as, thttpd-no.
+
+Run each of the servers on port 12330 + 3 * (404174240 % 293) + Y) where Y is
+1, 2, or 3, corresponding to SP, AS, or NO, respectively. Based on this
+calculation, the servers run on ports 12565, 12566, and 12567, respectively.
+Start them with the command, e.g. `src/thttpd-sp -p 12565 -D`. In a separate
+terminal, test the server by accessing a file in the working directory, e.g.
+`curl http://localhost:12565/TODO`. Do this for each serverto verifiy that
+each works under normal conditions.
+
+thttpd-as gave me an error upon requesting a file from it:
+```
+==915==ERROR: AddressSanitizer: strcpy-param-overlap: memory ranges
+[0x00000138aa60,0x00000138aa6a) and [0x00000138aa67, 0x00000138aa71) overlap
+```
+Per suggestion from the TA, I modified thttpd.c to delete line 4081 and insert
+in its place:
+```
+{
+char temp[200];
+(void) strcpy(temp, &str[7]);
+(void) strcpy(str, temp);
+}
+```
+I recompiled and this resolved the issue.
+
+Next I set about crashing the server by specifying a configuration file that
+causes the server to crash. Based on the code modifications, I created and
+passed with the `-C` argument a configuration file with a key/value pair
+with length l, 100 < l < 1000. The file I specified was:
+```
+logfile=Loremipsumdolorsitamet,consecteturadipiscingelit.Fuscelobortis,nullaut
+malesuadaiaculis,ligulaexfaucibuslectus,necconvallisliberomaurisquisnibh.Donec
+placeratexetvariuseleifend.Integerhendreritmalesuadamaurisvelultricies.
+Phasellusvitaedoloreumaurispretiumplaceratvitaeetmi.Sedurnaurna,mattisnec
+faucibusvel,dapibusadiam.Curabiturblanditmolestieerat,etvehiculaloremrhoncus
+quis.Namuttristiquenibh.Incursusrisusveldolorposuere,finibussollicitudinorci
+blandit.Quisqueegestaspuruseususcipitfacilisis.Fuscemollisenimvelsemsuscipit,
+laoreetconsequatloremmaximus.Integerluctusarcuatposuereplacerat.Fusceaipsumqui
+sliberosagittisvehicula.Crashendreritcommodovolutpat.Suspendisseeratelit,
+interdumveltinciduntmattis,temporegetdui.
+```
+without newlines.
+
+Next, I ran the program on each compiled variant with, e.g.:
+`gdb --args src/thttpd-as -p 12565 -D -C config-crash.conf`
+
+I ran the program with `r`, the program crashed, and I generated a backtrace
+with `bt`. In the following backtraces, I omitted function names that start
+with "?? ()" with the exception of instruction #0.
+
+Trace for -as variant:
+
+#0  0x00007ffff7073128 in ?? () from /lib64/libgcc_s.so.1
+#1  0x00007ffff7074029 in _Unwind_Backtrace () from /lib64/libgcc_s.so.1
+#2  0x000000000048a466 in __sanitizer::BufferedStackTrace::SlowUnwindStack (this=0x7fffffffbc30,
+    pc=4564072, max_depth=<optimized out>)
+    at ../../../../gcc-5.2.0/libsanitizer/sanitizer_common/sanitizer_unwind_posix_libcdep.cc:113
+#3  0x00000000004868e2 in __asan::GetStackTraceWithPcBpAndContext (fast=false, context=0x0,
+    bp=140737488342256, pc=<optimized out>, max_depth=256, stack=<optimized out>)
+    at ../../../../gcc-5.2.0/libsanitizer/asan/asan_stack.h:43
+#4  __asan_report_error (pc=<optimized out>, bp=bp@entry=140737488342256,
+    sp=sp@entry=140737488340128, addr=addr@entry=140737488342420, is_write=is_write@entry=0,
+    access_size=access_size@entry=723)
+    at ../../../../gcc-5.2.0/libsanitizer/asan/asan_report.cc:1006
+#5  0x000000000045a483 in __interceptor_strchr (
+    str=str@entry=0x7fffffffcd30 "logfile=Loremipsumdolorsitamet,consecteturadipiscingelit.Fuscelobortis,nullautmalesuadaiaculis,ligulaexfaucibuslectus,necconvallisliberomaurisquisnibh.Donecplacerat
+    exetvariuseleifend.Integerhendreritm"..., c=c@entry=35)
+    at ../../../../gcc-5.2.0/libsanitizer/asan/asan_interceptors.cc:430
+#6  0x00000000004b1e51 in read_config (filename=<optimized out>) at thttpd.c:1018
+
+Trace for -sp variant:
+
+#0  0x00007ffff6db1128 in ?? () from /lib64/libgcc_s.so.1
+#1  0x00007ffff6db2029 in _Unwind_Backtrace () from /lib64/libgcc_s.so.1
+#2  0x00007ffff76e50a6 in backtrace () from /lib64/libc.so.6
+#3  0x00007ffff7650e24 in __libc_message () from /lib64/libc.so.6
+#4  0x00007ffff76e8a57 in __fortify_fail () from /lib64/libc.so.6
+#5  0x00007ffff76e8a20 in __stack_chk_fail () from /lib64/libc.so.6
+#6  0x0000000000405092 in read_config (filename=<optimized out>) at thttpd.c:1190
+
+Trace for -no variant:
+
+#0  0x0000000000404dcb in read_config (filename=<optimized out>) at thttpd.c:1190
+
+Then, I generated the assembly language code with each set of compiler flags
+using gcc's -S flag.

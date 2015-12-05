@@ -126,17 +126,13 @@
 0x0000000000543847 <arith_driver+839>data.c:2638	cmp    %rbp,%rax
 0x000000000054384a <arith_driver+842>data.c:2638	setg   %al     rax=0xff48f044a5e641ca
 0x000000000054384d <arith_driver+845>data.c:2638	jmpq   0x54362d <arith_driver+301>     rip=0x54362d
-
 0x000000000054362d <arith_driver+301>data.c:2638	test   %al,%al
 0x000000000054362f <arith_driver+303>data.c:2645	je     0x5437c8 <arith_driver+712>     rip=0x5437c8
-
 0x00000000005437c8 <arith_driver+712>data.c:2645	imul   %rdi,%rbp   rbp=0xb38e48c71bd31c6f
 0x00000000005437cc <arith_driver+716>data.c:2602	jmpq   0x5435a8 <arith_driver+168>     rip=0x5435a8
-
 0x00000000005435a8 <arith_driver+168>data.c:2602	add    $0x1,%rbx   rbx=0x3
 0x00000000005435ac <arith_driver+172>data.c:2602	cmp    %rbx,%r13
 0x00000000005435af <arith_driver+175>data.c:2679	je     0x5436ab <arith_driver+427>     rip=0x5436ab
-
 0x00000000005436ab <arith_driver+427>lisp.h:700	add    $0x18,%rsp   rsp=0x7fffffffd7e8
 0x00000000005436af <arith_driver+431>data.c:2679	lea    0x0(,%rbp,4),%rax   rax=0xce39231c6f4c71bc
 0x00000000005436b7 <arith_driver+439>data.c:2679	pop    %rbx    rsp=0x7fffffffd7f0 rbx=0x7fffffffd838

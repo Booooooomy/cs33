@@ -1,0 +1,12 @@
+// Using Second Edition
+
+12.18: Using the progress graph in Figure 12.21, classify the following trajectories as either safe or unsafe.
+
+A. H2, L2, U2, H1, L1, S2, U1, S1, T1, T2 - UNSAFE
+B. H2, H1, L1, U1, S1, L2, T1, U2, S2, T2 - SAFE
+C. H1, L1, H2, L2, U2, S2, U1, S1, T1, T2 - UNSAFE
+
+
+12.24: The functions in the Rio I/O package (Section 10.4) are thread-safe. Are they reentrant as well?
+
+Yes
